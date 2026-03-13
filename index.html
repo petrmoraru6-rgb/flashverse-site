@@ -1,17 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>FlashVerse</title>
-<link rel="stylesheet" href="style.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#060915;
+color:white;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+flex-wrap:wrap;
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+}
+
+.logo span{
+color:#ff8a00;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:10px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+opacity:0.8;
+font-size:14px;
+}
+
+nav a:hover{
+opacity:1;
+}
+
+/* HERO */
+
+.hero{
+min-height:80vh;
+background:url("images/space.jpg") center/cover no-repeat;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+}
+
+.hero span{
+color:#ff8a00;
+}
+
+.hero p{
+margin-top:10px;
+font-size:18px;
+opacity:0.8;
+}
+
+.enter{
+margin-top:25px;
+padding:12px 28px;
+border-radius:30px;
+border:2px solid #ff8a00;
+background:transparent;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.enter:hover{
+background:#ff8a00;
+}
+
+/* FEATURED */
+
+.featured{
+padding:40px 20px;
+}
+
+.featured h2{
+margin-bottom:25px;
+font-size:22px;
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
+}
+
+.card{
+border-radius:16px;
+overflow:hidden;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.card-text{
+padding:16px;
+}
+
+.card-text h3{
+font-size:16px;
+margin-bottom:8px;
+}
+
+.card-text p{
+font-size:14px;
+opacity:0.6;
+}
+
+/* TABLET */
+
+@media(min-width:700px){
+
+.hero h1{
+font-size:80px;
+}
+
+.cards{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+/* PC */
+
+@media(min-width:1100px){
+
+.navbar{
+padding:25px 10%;
+}
+
+.hero{
+min-height:90vh;
+}
+
+.hero h1{
+font-size:110px;
+}
+
+.cards{
+grid-template-columns:repeat(3,1fr);
+}
+
+.featured{
+padding:80px 10%;
+}
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
+
 <header class="navbar">
-<div class="logo">Flash<span>Verse</span></div>
+
+<div class="logo">
+Flash<span>Verse</span>
+</div>
+
 <nav>
 <a href="#">Home</a>
 <a href="#">Archives</a>
@@ -19,37 +211,75 @@
 <a href="#">Community</a>
 <a href="#">About</a>
 </nav>
+
 </header>
 
+
+
 <section class="hero">
+
 <h1>Flash<span>Verse</span></h1>
+
 <p>Where Reality Bends.</p>
-<button class="enter">Enter the Void</button>
+
+<button class="enter">
+Enter the Void
+</button>
+
 </section>
 
+
+
 <section class="featured">
+
 <h2>Featured Anomalies</h2>
 
 <div class="cards">
 
+
 <div class="card">
+
 <img src="images/gamma.jpg">
+
 <div class="card-text">
-<h3>What if a Gamma Ray Burst hit the Earth?</h3>
-<p>39 Views (English)</p>
+
+<h3>
+What if a Gamma Ray Burst hit the Earth?
+</h3>
+
+<p>
+39 Views (English)
+</p>
+
 </div>
+
 </div>
+
+
 
 <div class="card">
+
 <img src="images/time.jpg">
+
 <div class="card-text">
-<h3>What if Time Suddenly Froze?</h3>
-<p>36 Views (English)</p>
-</div>
+
+<h3>
+What if Time Suddenly Froze?
+</h3>
+
+<p>
+36 Views (English)
+</p>
+
 </div>
 
 </div>
+
+
+</div>
+
 </section>
+
 
 </body>
 </html>
